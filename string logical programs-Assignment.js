@@ -80,7 +80,6 @@ reverseString("Billion Dollar");
 reverseString("Java");
     
 console.log(`=========================== 7. Count character "a" ====================`);
-
 function charCount(str) {
     let count = 0;
     for (const char of str) {     
@@ -126,8 +125,38 @@ wordCount("Enhance Your Learning Journey with Exclusive Add-ons");
 wordCount("Beyond frameworks, Beyond Imagination");
 wordCount("I am passionate software developer");
 
+console.log(`======================= 10.Duplicate characters count ====================`);
 
-    
+let str = "Banana";  // a - 3, n - 2
+
+function doubleChar(string) {
+
+    let finalOutput = {};
+for (let index = 0; index < str.length; index++) {
+    const element = str.charAt(index);
+    let count = 0;
+    for (let j = 0; j < str.length; j++) {
+        const char = str.charAt(j);
+        if (char==element) {
+            count++;     
+        }
+    }
+    // console.log(element, count);
+    if (count>1) {
+        finalOutput[element] = count;
+    }  
+}
+for (const key in finalOutput) {
+    const element = finalOutput[key];
+    console.log(` ${string} : ${key} - ${element}`);
+
+}    
+}
+doubleChar("Banana");
+doubleChar("Apple");
+doubleChar("Software Developer");
+
+
 
 
 
