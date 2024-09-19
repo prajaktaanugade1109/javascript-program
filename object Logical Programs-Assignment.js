@@ -142,3 +142,32 @@ const obj = {
 }
 let array = Object.entries(obj);
 console.log(...array);
+
+// using object.keys()
+const obj2 = {
+    key1:"value1",
+    key2:"value2",
+    key3:"value3",
+};
+const entries2 = Object.keys(obj2).map((key) => [key, obj2[key]]);
+console.log(entries2);
+
+console.log('==========12.How to check if a value is object - like in JavaScript  =============');
+function isObjectLike(value) {
+    return typeof value == "object" && value != null;
+   
+}
+console.log(isObjectLike({}));
+console.log(isObjectLike([]));
+console.log(isObjectLike(null));
+console.log(isObjectLike(42));
+console.log(isObjectLike('string'));
+
+console.log('==========13.How to use a variable for a key in a JavaScript object literal =============');
+
+let key1 = 'name';
+let value = 'John Doe';
+let obj3 ={
+    [key1]:value
+};
+console.log(obj3);
